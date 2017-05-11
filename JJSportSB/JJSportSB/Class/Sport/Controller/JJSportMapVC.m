@@ -26,6 +26,15 @@
  地图
  */
 @property(nonatomic , strong) MAMapView *mapView;
+
+
+
+/**
+ 上一次坐标位置
+ */
+@property(nonatomic , strong) CLLocation *lastLocation;
+
+
 @end
 
 @implementation JJSportMapVC
@@ -101,7 +110,7 @@
             pointAnnotation.subtitle = userLocation.subtitle;
             [mapView addAnnotation:pointAnnotation];
             
-            
+            self.lastLocation = self.startLocation;
             NSLog(@"起始位置%f----%f",self.startLocation.coordinate.latitude,self.startLocation.coordinate.longitude);
             
         }
@@ -110,6 +119,26 @@
     //让用户位置始终处于屏幕中心
     [mapView setCenterCoordinate:userLocation.coordinate animated:YES];
     
+      //正确的做法应该是在用户位置改变的时候进行绘制线条而不是在点击的时候绘制线条
+    
+    
+//    //在这里完成折线对线的创建,
+    CLLocationCoordinate2D commonPolylineCoords[2];
+    commonPolylineCoords[0].latitude = self.lastLocation.coordinate.latitude;
+    commonPolylineCoords[0].longitude = self.lastLocation.coordinate.longitude;
+//
+    commonPolylineCoords[1].latitude = userLocation.location.coordinate.latitude;
+    commonPolylineCoords[1].longitude = userLocation.location.coordinate.longitude;
+
+//
+//    //构造折线对象
+    MAPolyline *commonPolyline = [MAPolyline polylineWithCoordinates:commonPolylineCoords count:2];
+//    
+//    //在地图上添加折线对象
+    
+      [_mapView addOverlay: commonPolyline];
+    
+    self.lastLocation = userLocation.location;
     
 }
 
@@ -125,24 +154,20 @@
 
 
     //根据官方文档,构造折线对象
-    
-    CLLocationCoordinate2D commonPolylineCoords[4];
+    CLLocationCoordinate2D commonPolylineCoords[2];
     commonPolylineCoords[0].latitude = self.startLocation.coordinate.latitude;
     commonPolylineCoords[0].longitude = self.startLocation.coordinate.longitude;
     
     commonPolylineCoords[1].latitude = coordinate.latitude;
     commonPolylineCoords[1].longitude = coordinate.longitude;
-    
-   
-    
+
     //构造折线对象
     MAPolyline *commonPolyline = [MAPolyline polylineWithCoordinates:commonPolylineCoords count:2];
     
     //在地图上添加折线对象
     [_mapView addOverlay: commonPolyline];
-    
-
 }
+
 
 
 /**
@@ -157,13 +182,13 @@
 {
     if ([overlay isKindOfClass:[MAPolyline class]])
     {
+        //创建多线条渲染器
         MAPolylineRenderer *polylineRenderer = [[MAPolylineRenderer alloc] initWithPolyline:overlay];
-        
+        //设置渲染的线条的宽度
         polylineRenderer.lineWidth    = 8.f;
+        //线条的颜色  //线条的颜色数据应该是model
         polylineRenderer.strokeColor  = [UIColor colorWithRed:0 green:1 blue:0 alpha:0.6];
-        polylineRenderer.lineJoinType = kMALineJoinRound;
-        polylineRenderer.lineCapType  = kMALineCapRound;
-        
+        //返回多线条渲染器
         return polylineRenderer;
     }
     return nil;
