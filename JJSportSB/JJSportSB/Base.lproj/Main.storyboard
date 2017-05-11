@@ -18,6 +18,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="ruy-kd-cP4" kind="relationship" relationship="viewControllers" id="12m-Hp-E10"/>
                         <segue destination="3T0-bt-HdO" kind="relationship" relationship="viewControllers" id="Doa-S2-HmJ"/>
@@ -38,7 +43,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xf3-Lz-PsQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1341" y="301"/>
+            <point key="canvasLocation" x="-1338" y="436"/>
         </scene>
         <!--Discover-->
         <scene sceneID="8AG-qU-LtI">
@@ -48,7 +53,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v59-iS-aTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1170" y="301"/>
+            <point key="canvasLocation" x="-1166" y="436"/>
         </scene>
         <!--Sport-->
         <scene sceneID="6Ec-N0-037">
@@ -58,7 +63,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tP2-Xp-Gnl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-984" y="301"/>
+            <point key="canvasLocation" x="-979" y="436"/>
         </scene>
         <!--Message-->
         <scene sceneID="Gbe-Lm-fr5">
@@ -68,7 +73,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdn-B8-j12" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-813" y="301"/>
+            <point key="canvasLocation" x="-810" y="436"/>
         </scene>
         <!--Prefile-->
         <scene sceneID="4JS-tD-rpM">
@@ -78,7 +83,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9S-o2-BaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-630" y="301"/>
+            <point key="canvasLocation" x="-626" y="436"/>
         </scene>
     </scenes>
 </document>

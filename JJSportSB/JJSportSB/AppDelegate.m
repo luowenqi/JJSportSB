@@ -20,6 +20,8 @@
     //进行全局的偏好设置
     [[UITabBar appearance]setTintColor:KGlobalGreen];
     
+//    [UITabBarController new]selectedIndex
+    
     return YES;
 }
 
