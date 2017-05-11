@@ -123,8 +123,10 @@
     
     //这样虽然可以完成运动轨迹的描绘,但是运动模型对于运动的数据没有知晓,不知道运动的速度,也不知道运动的时间,运动的距离,运动的速度等,所以正确的做法应该是把更新的位置传过去,让运动追踪模型去计算数据
     [_mapView addOverlay:[self.trackingModel drawPolylineWithLocatin:userLocation.location]];
-
     
+//    NSLog(@"运动距离%f",self.trackingModel.totalDistance);
+//    NSLog(@"运动时间%@",self.trackingModel.totalTimeStr);
+//    NSLog(@"%f",self.trackingModel.maxSpeed);
 }
 
 
@@ -187,9 +189,12 @@
         /**
          *  默认情况下, annotation view的中心位于annotation的坐标位置，可以设置centerOffset改变view的位置，正的偏移使view朝右下方移动，负的朝左上方，单位是像素
          */
+       
+        
         annotationView.centerOffset = CGPointMake(0, -image.size.height/2);
         return annotationView;
     }
+
     return nil;
 }
 

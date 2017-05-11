@@ -24,6 +24,8 @@
 @property(nonatomic , strong ) CLLocation * startLoaction;
 
 
+@property(nonatomic , strong) NSMutableArray * trackingLineModelArray;
+
 @end
 
 @implementation JJSportTrackingModel
@@ -32,6 +34,7 @@
 
     if (self = [super init]) {
        _sportType = sportType;
+        self.trackingLineModelArray = [NSMutableArray array];
     }
 
     return self;
@@ -91,6 +94,8 @@
 
     JJSportTrackingLineModel* trackingLineModel = [[JJSportTrackingLineModel alloc]initWithStartLocation:self.lastLoaction endLocation:userLocation];
     
+    [self.trackingLineModelArray addObject:trackingLineModel];
+    
     _currentLineColor = trackingLineModel.color;
 
     self.lastLoaction = userLocation;
@@ -101,6 +106,38 @@
 
 
 
+-(float)totalDistance{
+
+    return [[self.trackingLineModelArray valueForKeyPath:@"@sum.distance"] floatValue];
+
+}
+
+-(float)totalTime{
+
+    return [[self.trackingLineModelArray valueForKeyPath:@"@sum.time"] floatValue];
+}
+
+//运动总时间字符串
+-(NSString *)totalTimeStr
+{
+    int hour = self.totalTime/3600;
+    int minute = (int)self.totalTime%3600/60;
+    int second = (int)self.totalTime%60;
+    return [NSString stringWithFormat:@"%02zd：%02zd：%02zd",hour,minute,second];
+}
+
+//运动平均速度
+-(float)avgSpeed
+{
+    return [[self.trackingLineModelArray valueForKeyPath:@"@avg.speed"] floatValue];
+}
+
+
+//运动最大速度
+-(float)maxSpeed
+{
+    return [[self.trackingLineModelArray valueForKeyPath:@"@max.speed"] floatValue];
+}
 
 
 

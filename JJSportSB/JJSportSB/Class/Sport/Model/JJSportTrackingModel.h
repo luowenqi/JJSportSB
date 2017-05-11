@@ -32,6 +32,25 @@ typedef enum : NSUInteger {
  */
 @property(nonatomic , strong) UIImage * sportImage;
 
+
+//运动总距离
+@property(nonatomic,assign,readonly)float totalDistance;
+
+//运动总时间
+@property(nonatomic,assign,readonly)float totalTime;
+
+//运动总时间字符串
+@property(nonatomic,strong,readonly)NSString *totalTimeStr;
+
+//运动平均速度
+@property(nonatomic,assign,readonly)float avgSpeed;
+
+
+//运动最大速度
+@property(nonatomic,assign,readonly)float maxSpeed;
+
+
+
 /**
 运动追踪指定初始化方法
  */
