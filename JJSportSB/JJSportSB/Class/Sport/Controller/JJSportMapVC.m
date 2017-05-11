@@ -78,7 +78,17 @@
 
 #pragma mark - 更新位置
 -(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation{
-    NSLog(@"%.f-----%.f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
+//    NSLog(@"%.f-----%.f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
+    
+    //三次滤波算法,接触初期定位不准问题
+    static NSInteger flage = 0;
+    
+    if (flage <= 3) {
+        flage++;
+        return;
+    }
+    
+    
     //判断是不是正在更新位置
     if (updatingLocation) {
         if (!self.startLocation && _mapView.showsUserLocation == YES) {  //如果起始位置不存在,并且已经定位成功
@@ -90,10 +100,74 @@
             pointAnnotation.title = userLocation.title;
             pointAnnotation.subtitle = userLocation.subtitle;
             [mapView addAnnotation:pointAnnotation];
+            
+            
+            NSLog(@"起始位置%f----%f",self.startLocation.coordinate.latitude,self.startLocation.coordinate.longitude);
+            
         }
     }
+    
+    //让用户位置始终处于屏幕中心
+    [mapView setCenterCoordinate:userLocation.coordinate animated:YES];
+    
+    
 }
 
+
+
+/**
+ * @brief 单击地图回调，返回经纬度
+ * @param mapView 地图View
+ * @param coordinate 经纬度
+ */
+#pragma mark - 单击地图返回位置
+- (void)mapView:(MAMapView *)mapView didSingleTappedAtCoordinate:(CLLocationCoordinate2D)coordinate{
+
+
+    //根据官方文档,构造折线对象
+    
+    CLLocationCoordinate2D commonPolylineCoords[4];
+    commonPolylineCoords[0].latitude = self.startLocation.coordinate.latitude;
+    commonPolylineCoords[0].longitude = self.startLocation.coordinate.longitude;
+    
+    commonPolylineCoords[1].latitude = coordinate.latitude;
+    commonPolylineCoords[1].longitude = coordinate.longitude;
+    
+   
+    
+    //构造折线对象
+    MAPolyline *commonPolyline = [MAPolyline polylineWithCoordinates:commonPolylineCoords count:2];
+    
+    //在地图上添加折线对象
+    [_mapView addOverlay: commonPolyline];
+    
+
+}
+
+
+/**
+ * @brief 根据overlay生成对应的Renderer
+ * @param mapView 地图View
+ * @param overlay 指定的overlay
+ * @return 生成的覆盖物Renderer
+ */
+
+#pragma mark - 在mapView上添加线条之后会进行调用设置线条的样式
+- (MAOverlayRenderer *)mapView:(MAMapView *)mapView rendererForOverlay:(id <MAOverlay>)overlay
+{
+    if ([overlay isKindOfClass:[MAPolyline class]])
+    {
+        MAPolylineRenderer *polylineRenderer = [[MAPolylineRenderer alloc] initWithPolyline:overlay];
+        
+        polylineRenderer.lineWidth    = 8.f;
+        polylineRenderer.strokeColor  = [UIColor colorWithRed:0 green:1 blue:0 alpha:0.6];
+        polylineRenderer.lineJoinType = kMALineJoinRound;
+        polylineRenderer.lineCapType  = kMALineCapRound;
+        
+        return polylineRenderer;
+    }
+    return nil;
+}
 
 
 
