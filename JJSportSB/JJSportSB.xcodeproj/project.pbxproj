@@ -29,6 +29,7 @@
 		A419362D1EC3E642003FA0FD /* Prefile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A419362C1EC3E642003FA0FD /* Prefile.storyboard */; };
 		A419362F1EC3E651003FA0FD /* Sport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A419362E1EC3E651003FA0FD /* Sport.storyboard */; };
 		A41936311EC3E65F003FA0FD /* SportCicle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41936301EC3E65F003FA0FD /* SportCicle.storyboard */; };
+		A41936341EC48F6C003FA0FD /* JJSportTrackingLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A41936331EC48F6C003FA0FD /* JJSportTrackingLineModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,8 @@
 		A419362C1EC3E642003FA0FD /* Prefile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Prefile.storyboard; sourceTree = "<group>"; };
 		A419362E1EC3E651003FA0FD /* Sport.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sport.storyboard; sourceTree = "<group>"; };
 		A41936301EC3E65F003FA0FD /* SportCicle.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SportCicle.storyboard; sourceTree = "<group>"; };
+		A41936321EC48F6C003FA0FD /* JJSportTrackingLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSportTrackingLineModel.h; sourceTree = "<group>"; };
+		A41936331EC48F6C003FA0FD /* JJSportTrackingLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSportTrackingLineModel.m; sourceTree = "<group>"; };
 		C0D37355963419F7E85E72F9 /* Pods-JJSportSB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJSportSB.release.xcconfig"; path = "Pods/Target Support Files/Pods-JJSportSB/Pods-JJSportSB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -312,6 +315,8 @@
 			children = (
 				A41936141EC3E566003FA0FD /* JJSportTrackingModel.h */,
 				A41936151EC3E566003FA0FD /* JJSportTrackingModel.m */,
+				A41936321EC48F6C003FA0FD /* JJSportTrackingLineModel.h */,
+				A41936331EC48F6C003FA0FD /* JJSportTrackingLineModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -500,6 +505,7 @@
 				A41936231EC3E566003FA0FD /* JJSportMapVC.m in Sources */,
 				A41935DB1EC3E47F003FA0FD /* AppDelegate.m in Sources */,
 				A41936241EC3E566003FA0FD /* JJSportSupportVC.m in Sources */,
+				A41936341EC48F6C003FA0FD /* JJSportTrackingLineModel.m in Sources */,
 				A41936261EC3E566003FA0FD /* JJSportTrackingModel.m in Sources */,
 				A41936221EC3E566003FA0FD /* JJProfileVC.m in Sources */,
 				A41935D81EC3E47F003FA0FD /* main.m in Sources */,

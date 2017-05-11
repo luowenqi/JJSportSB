@@ -42,6 +42,11 @@ typedef enum : NSUInteger {
 
 
 
+/**
+ 当前线条颜色
+ */
+@property(nonatomic , strong ,readonly) UIColor * currentLineColor;
+
 
 
 

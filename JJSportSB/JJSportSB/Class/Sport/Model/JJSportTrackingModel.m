@@ -7,6 +7,7 @@
 //
 
 #import "JJSportTrackingModel.h"
+#import "JJSportTrackingLineModel.h"
 
 @interface JJSportTrackingModel ()
 
@@ -71,22 +72,38 @@
         self.lastLoaction = userLocation;
     }
     
-    //根据官方文档,构造折线对象
-    CLLocationCoordinate2D commonPolylineCoords[2];
-    commonPolylineCoords[0].latitude = self.lastLoaction.coordinate.latitude;
-    commonPolylineCoords[0].longitude = self.lastLoaction.coordinate.longitude;
+    //时间优化算法
+    if ([[NSDate date] timeIntervalSinceDate:userLocation.timestamp] >= 2.0) {
+        return nil;
+    }
     
-    commonPolylineCoords[1].latitude = userLocation.coordinate.latitude;
-    commonPolylineCoords[1].longitude = userLocation.coordinate.longitude;
     
-    //构造折线对象
-    MAPolyline *commonPolyline = [MAPolyline polylineWithCoordinates:commonPolylineCoords count:2];
- 
+    //速度优化算法
+    if (userLocation.speed <= 0) {   //如果速度小于等于0则表示用户是静止状态返回-1，不需要绘制轨迹（大大提高APP的性能损耗)
+        NSLog(@"%.f",userLocation.speed);
+        return nil;
+    }
+    
+    
+    
+    
+    //现在因为担心运动追踪模型里面代码太多,所以把这一块的代码分出来一个独立的模型,去处理线条绘制,计算线条颜色,最大速度等.
+
+    JJSportTrackingLineModel* trackingLineModel = [[JJSportTrackingLineModel alloc]initWithStartLocation:self.lastLoaction endLocation:userLocation];
+    
+    _currentLineColor = trackingLineModel.color;
+
     self.lastLoaction = userLocation;
 
-    return commonPolyline;
-    
+    return trackingLineModel.polyLine;
 }
+
+
+
+
+
+
+
 
 
 @end

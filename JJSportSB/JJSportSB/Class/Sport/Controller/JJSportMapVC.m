@@ -140,6 +140,8 @@
 #pragma mark - 在mapView上添加线条之后会进行调用设置线条的样式
 - (MAOverlayRenderer *)mapView:(MAMapView *)mapView rendererForOverlay:(id <MAOverlay>)overlay
 {
+    
+    
     if ([overlay isKindOfClass:[MAPolyline class]])
     {
         //创建多线条渲染器
@@ -147,7 +149,7 @@
         //设置渲染的线条的宽度
         polylineRenderer.lineWidth    = 8.f;
         //线条的颜色  //线条的颜色数据应该是model
-        polylineRenderer.strokeColor  = [UIColor colorWithRed:0 green:1 blue:0 alpha:0.6];
+        polylineRenderer.strokeColor  = self.trackingModel.currentLineColor;
         //返回多线条渲染器
         return polylineRenderer;
     }
