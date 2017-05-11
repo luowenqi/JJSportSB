@@ -297,12 +297,12 @@
 		A419360C1EC3E566003FA0FD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A419360D1EC3E566003FA0FD /* JJSportMapVC.h */,
-				A419360E1EC3E566003FA0FD /* JJSportMapVC.m */,
-				A419360F1EC3E566003FA0FD /* JJSportSupportVC.h */,
-				A41936101EC3E566003FA0FD /* JJSportSupportVC.m */,
 				A41936111EC3E566003FA0FD /* JJSportVC.h */,
 				A41936121EC3E566003FA0FD /* JJSportVC.m */,
+				A419360F1EC3E566003FA0FD /* JJSportSupportVC.h */,
+				A41936101EC3E566003FA0FD /* JJSportSupportVC.m */,
+				A419360D1EC3E566003FA0FD /* JJSportMapVC.h */,
+				A419360E1EC3E566003FA0FD /* JJSportMapVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

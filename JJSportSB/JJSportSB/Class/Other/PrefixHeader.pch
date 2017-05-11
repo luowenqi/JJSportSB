@@ -18,6 +18,8 @@
 
 #import "JJAddtionHeader.h"   //各种分类
 
+#import "JJSportTrackingModel.h"
+
 
 #import "JJSportMapVC.h"  //运动地图
 

@@ -13,6 +13,9 @@
 @interface JJSportMapVC ()<MAMapViewDelegate>
 
 
+@property(nonatomic,weak)IBOutlet UIView *containerView;
+
+
 /**
  起点位置
  */
@@ -42,7 +45,6 @@
 #pragma mark - 创建地图视图
 -(void)creatMapView{
 
-    
     [AMapServices sharedServices].enableHTTPS = YES;
     
     ///初始化地图
@@ -68,24 +70,18 @@
      //     * 设置为YES的时候必须保证 Background Modes 中的 Location updates处于选中状态，否则会抛出异常。
      //     */
      _mapView.allowsBackgroundLocationUpdates = YES;
-    
-
 }
 
 
 
 
 
-
+#pragma mark - 更新位置
 -(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation{
-
     NSLog(@"%.f-----%.f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
-    
     //判断是不是正在更新位置
     if (updatingLocation) {
-        
         if (!self.startLocation && _mapView.showsUserLocation == YES) {  //如果起始位置不存在,并且已经定位成功
-
             //记录起始位置
             self.startLocation = userLocation.location;
             //添加大头针
@@ -99,6 +95,9 @@
 }
 
 
+
+
+
 /**
  * @brief 根据anntation生成对应的View
  * @param mapView 地图View
@@ -107,10 +106,11 @@
  */
 - (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation
 {
+    
     if ([annotation isKindOfClass:[MAPointAnnotation class]])
     {
         static NSString *pointReuseIndentifier = @"pointReuseIndentifier";
-        MAPinAnnotationView*annotationView = (MAPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndentifier];
+        MAPinAnnotationView* annotationView = (MAPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndentifier];
         if (annotationView == nil)
         {
             annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointReuseIndentifier];
@@ -119,7 +119,7 @@
         annotationView.animatesDrop = YES;        //设置标注动画显示，默认为NO
         annotationView.draggable = YES;        //设置标注可以拖动，默认为NO
   
-        UIImage *image= [UIImage imageNamed:@"ic_history_riding_normal_54x54_"];
+        UIImage *image= self.trackingModel.sportImage;
         annotationView.image = image;
         
         //改变大头针位置偏移量,大头针往上移动图片一半的高度，让大头针下方的尖角处于默认大头针的中心点
@@ -131,8 +131,6 @@
     }
     return nil;
 }
-
-
 
 
 @end

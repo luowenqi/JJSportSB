@@ -42,8 +42,29 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxZ-PV-XEZ">
                                 <rect key="frame" x="128.5" y="450" width="118" height="118"/>
                                 <state key="normal" title="开始" backgroundImage="btn_start_normal_118x118_"/>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sN-wN-W9h">
+                                <rect key="frame" x="41" y="72" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="跑步"/>
                                 <connections>
-                                    <segue destination="CAv-BM-bSQ" kind="presentation" id="Isc-bg-M6G"/>
+                                    <action selector="sportTypeClicked:" destination="MpX-XN-iRj" eventType="touchUpInside" id="QxT-56-W83"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lc-Rc-dq0">
+                                <rect key="frame" x="41" y="142" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="走路"/>
+                                <connections>
+                                    <action selector="sportTypeClicked:" destination="MpX-XN-iRj" eventType="touchUpInside" id="Aee-ib-ldp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teO-4a-WPK">
+                                <rect key="frame" x="41" y="223" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="骑行"/>
+                                <connections>
+                                    <action selector="sportTypeClicked:" destination="MpX-XN-iRj" eventType="touchUpInside" id="qXX-VO-KDr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,7 +83,7 @@
         <!--Sport SupportVC-->
         <scene sceneID="1a3-Mu-C0n">
             <objects>
-                <viewController id="CAv-BM-bSQ" customClass="JJSportSupportVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JJSportSupportVC" id="CAv-BM-bSQ" customClass="JJSportSupportVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NMN-Z1-YA4"/>
                         <viewControllerLayoutGuide type="bottom" id="qju-5j-wgs"/>
@@ -107,42 +128,52 @@
                                     <constraint firstAttribute="height" constant="64" id="kEV-pF-Dcw"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbc-8h-H8V">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqa-2Y-nbn">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <connections>
-                                    <segue destination="ZB0-Vp-l7n" kind="embed" id="1go-MJ-idt"/>
+                                    <segue destination="ZB0-Vp-l7n" kind="embed" id="phB-ag-7Sz"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="nqa-2Y-nbn" firstAttribute="leading" secondItem="1go-Uh-zma" secondAttribute="leading" id="4B4-FU-WzQ"/>
                             <constraint firstAttribute="trailing" secondItem="u4n-K4-pJO" secondAttribute="trailing" id="8oV-In-xI9"/>
                             <constraint firstItem="u4n-K4-pJO" firstAttribute="leading" secondItem="1go-Uh-zma" secondAttribute="leading" id="Fu6-eb-GBj"/>
-                            <constraint firstAttribute="trailing" secondItem="wbc-8h-H8V" secondAttribute="trailing" id="h8j-C6-VpC"/>
-                            <constraint firstItem="wbc-8h-H8V" firstAttribute="top" secondItem="1go-Uh-zma" secondAttribute="top" id="iBe-6S-tKM"/>
-                            <constraint firstItem="u4n-K4-pJO" firstAttribute="top" secondItem="wbc-8h-H8V" secondAttribute="bottom" id="nI1-uc-qkf"/>
-                            <constraint firstItem="wbc-8h-H8V" firstAttribute="leading" secondItem="1go-Uh-zma" secondAttribute="leading" id="nYH-kY-78B"/>
+                            <constraint firstAttribute="trailing" secondItem="nqa-2Y-nbn" secondAttribute="trailing" id="Utl-cm-feH"/>
+                            <constraint firstItem="u4n-K4-pJO" firstAttribute="top" secondItem="nqa-2Y-nbn" secondAttribute="bottom" id="bEb-Ch-8Du"/>
+                            <constraint firstItem="nqa-2Y-nbn" firstAttribute="top" secondItem="1go-Uh-zma" secondAttribute="top" id="dFK-HP-ZAc"/>
                             <constraint firstItem="qju-5j-wgs" firstAttribute="top" secondItem="u4n-K4-pJO" secondAttribute="bottom" id="znJ-8x-vLf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="nqa-2Y-nbn" id="Z3W-yJ-jhz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8pV-un-PDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1167" y="24"/>
+            <point key="canvasLocation" x="1145" y="15"/>
         </scene>
         <!--Sport MapVC-->
         <scene sceneID="P4N-QX-cbe">
             <objects>
                 <viewController id="ZB0-Vp-l7n" customClass="JJSportMapVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aCm-q2-a7G"/>
+                        <viewControllerLayoutGuide type="bottom" id="NK2-cB-gyo"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bid-sU-IjC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="bid-sU-IjC" id="Vid-jH-qey"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oVF-ef-Klt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1863" y="2"/>
+            <point key="canvasLocation" x="2158" y="-5"/>
         </scene>
     </scenes>
     <resources>

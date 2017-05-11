@@ -10,13 +10,30 @@
 
 
 typedef enum : NSUInteger {
-    JJSportTypeRun,
+    JJSportTypeRun = 1,
     JJSJJSportWalk,
     JJSJJSportRiding,
 } JJSportType;
 
 @interface JJSportTrackingModel : NSObject
 
-@property(nonatomic , assign) JJSportType * sportType;
+
+/**
+ 运动类型
+ */
+@property(nonatomic , assign , readonly) JJSportType  sportType;
+
+
+/**
+运动追踪指定初始化方法
+ */
+-(instancetype)initWithSportModel:(JJSportType)sportType;
+
+
+
+/**
+ 运动图标
+ */
+@property(nonatomic , strong) UIImage * sportImage;
 
 @end

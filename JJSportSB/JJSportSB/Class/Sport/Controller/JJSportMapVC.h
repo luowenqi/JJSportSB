@@ -10,4 +10,6 @@
 
 @interface JJSportMapVC : UIViewController
 
+@property(nonatomic , strong) JJSportTrackingModel * trackingModel;
+
 @end
