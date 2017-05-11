@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MAMapKit/MAMapKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
 
 
 typedef enum : NSUInteger {
@@ -24,16 +26,24 @@ typedef enum : NSUInteger {
 @property(nonatomic , assign , readonly) JJSportType  sportType;
 
 
+
+/**
+ 运动图标
+ */
+@property(nonatomic , strong) UIImage * sportImage;
+
 /**
 运动追踪指定初始化方法
  */
 -(instancetype)initWithSportModel:(JJSportType)sportType;
 
 
+-(MAPolyline*)drawPolylineWithLocatin:(CLLocation*)userLocation;
 
-/**
- 运动图标
- */
-@property(nonatomic , strong) UIImage * sportImage;
+
+
+
+
+
 
 @end

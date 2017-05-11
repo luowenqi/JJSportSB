@@ -7,8 +7,7 @@
 //
 
 #import "JJSportMapVC.h"
-#import <MAMapKit/MAMapKit.h>
-#import <AMapFoundationKit/AMapFoundationKit.h>
+
 
 @interface JJSportMapVC ()<MAMapViewDelegate>
 
@@ -122,51 +121,12 @@
       //正确的做法应该是在用户位置改变的时候进行绘制线条而不是在点击的时候绘制线条
     
     
-//    //在这里完成折线对线的创建,
-    CLLocationCoordinate2D commonPolylineCoords[2];
-    commonPolylineCoords[0].latitude = self.lastLocation.coordinate.latitude;
-    commonPolylineCoords[0].longitude = self.lastLocation.coordinate.longitude;
-//
-    commonPolylineCoords[1].latitude = userLocation.location.coordinate.latitude;
-    commonPolylineCoords[1].longitude = userLocation.location.coordinate.longitude;
+    //这样虽然可以完成运动轨迹的描绘,但是运动模型对于运动的数据没有知晓,不知道运动的速度,也不知道运动的时间,运动的距离,运动的速度等,所以正确的做法应该是把更新的位置传过去,让运动追踪模型去计算数据
+    [_mapView addOverlay:[self.trackingModel drawPolylineWithLocatin:userLocation.location]];
 
-//
-//    //构造折线对象
-    MAPolyline *commonPolyline = [MAPolyline polylineWithCoordinates:commonPolylineCoords count:2];
-//    
-//    //在地图上添加折线对象
-    
-      [_mapView addOverlay: commonPolyline];
-    
-    self.lastLocation = userLocation.location;
     
 }
 
-
-
-/**
- * @brief 单击地图回调，返回经纬度
- * @param mapView 地图View
- * @param coordinate 经纬度
- */
-#pragma mark - 单击地图返回位置
-- (void)mapView:(MAMapView *)mapView didSingleTappedAtCoordinate:(CLLocationCoordinate2D)coordinate{
-
-
-    //根据官方文档,构造折线对象
-    CLLocationCoordinate2D commonPolylineCoords[2];
-    commonPolylineCoords[0].latitude = self.startLocation.coordinate.latitude;
-    commonPolylineCoords[0].longitude = self.startLocation.coordinate.longitude;
-    
-    commonPolylineCoords[1].latitude = coordinate.latitude;
-    commonPolylineCoords[1].longitude = coordinate.longitude;
-
-    //构造折线对象
-    MAPolyline *commonPolyline = [MAPolyline polylineWithCoordinates:commonPolylineCoords count:2];
-    
-    //在地图上添加折线对象
-    [_mapView addOverlay: commonPolyline];
-}
 
 
 
