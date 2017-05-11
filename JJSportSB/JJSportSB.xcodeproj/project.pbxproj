@@ -1,0 +1,669 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		94CA9A45557661B6F9DA458E /* libPods-JJSportSB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04956EB411A94361E2466CBF /* libPods-JJSportSB.a */; };
+		A41935D81EC3E47F003FA0FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A41935D71EC3E47F003FA0FD /* main.m */; };
+		A41935DB1EC3E47F003FA0FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A41935DA1EC3E47F003FA0FD /* AppDelegate.m */; };
+		A41935DE1EC3E47F003FA0FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41935DD1EC3E47F003FA0FD /* ViewController.m */; };
+		A41935E11EC3E47F003FA0FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41935DF1EC3E47F003FA0FD /* Main.storyboard */; };
+		A41935E31EC3E47F003FA0FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A41935E21EC3E47F003FA0FD /* Assets.xcassets */; };
+		A41935E61EC3E47F003FA0FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41935E41EC3E47F003FA0FD /* LaunchScreen.storyboard */; };
+		A419361D1EC3E566003FA0FD /* JJDiscoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A41935F11EC3E566003FA0FD /* JJDiscoverVC.m */; };
+		A419361F1EC3E566003FA0FD /* JJMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A41935FA1EC3E566003FA0FD /* JJMessageVC.m */; };
+		A41936201EC3E566003FA0FD /* Controllers.json in Resources */ = {isa = PBXBuildFile; fileRef = A41935FE1EC3E566003FA0FD /* Controllers.json */; };
+		A41936211EC3E566003FA0FD /* UIButton+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = A41936031EC3E566003FA0FD /* UIButton+Addtion.m */; };
+		A41936221EC3E566003FA0FD /* JJProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A41936081EC3E566003FA0FD /* JJProfileVC.m */; };
+		A41936231EC3E566003FA0FD /* JJSportMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A419360E1EC3E566003FA0FD /* JJSportMapVC.m */; };
+		A41936241EC3E566003FA0FD /* JJSportSupportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A41936101EC3E566003FA0FD /* JJSportSupportVC.m */; };
+		A41936251EC3E566003FA0FD /* JJSportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A41936121EC3E566003FA0FD /* JJSportVC.m */; };
+		A41936261EC3E566003FA0FD /* JJSportTrackingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A41936151EC3E566003FA0FD /* JJSportTrackingModel.m */; };
+		A41936271EC3E566003FA0FD /* JJSportCicleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A419361A1EC3E566003FA0FD /* JJSportCicleVC.m */; };
+		A41936291EC3E618003FA0FD /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41936281EC3E618003FA0FD /* Discover.storyboard */; };
+		A419362B1EC3E631003FA0FD /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A419362A1EC3E631003FA0FD /* Message.storyboard */; };
+		A419362D1EC3E642003FA0FD /* Prefile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A419362C1EC3E642003FA0FD /* Prefile.storyboard */; };
+		A419362F1EC3E651003FA0FD /* Sport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A419362E1EC3E651003FA0FD /* Sport.storyboard */; };
+		A41936311EC3E65F003FA0FD /* SportCicle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41936301EC3E65F003FA0FD /* SportCicle.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04956EB411A94361E2466CBF /* libPods-JJSportSB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JJSportSB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0BA2F31FD8421A27CEECB5C /* Pods-JJSportSB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJSportSB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JJSportSB/Pods-JJSportSB.debug.xcconfig"; sourceTree = "<group>"; };
+		A41935D31EC3E47F003FA0FD /* JJSportSB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJSportSB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A41935D71EC3E47F003FA0FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A41935D91EC3E47F003FA0FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A41935DA1EC3E47F003FA0FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A41935DC1EC3E47F003FA0FD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A41935DD1EC3E47F003FA0FD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A41935E01EC3E47F003FA0FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A41935E21EC3E47F003FA0FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A41935E51EC3E47F003FA0FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A41935E71EC3E47F003FA0FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A41935F01EC3E566003FA0FD /* JJDiscoverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJDiscoverVC.h; sourceTree = "<group>"; };
+		A41935F11EC3E566003FA0FD /* JJDiscoverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJDiscoverVC.m; sourceTree = "<group>"; };
+		A41935F91EC3E566003FA0FD /* JJMessageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMessageVC.h; sourceTree = "<group>"; };
+		A41935FA1EC3E566003FA0FD /* JJMessageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMessageVC.m; sourceTree = "<group>"; };
+		A41935FE1EC3E566003FA0FD /* Controllers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Controllers.json; sourceTree = "<group>"; };
+		A41935FF1EC3E566003FA0FD /* GlobalColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalColor.h; sourceTree = "<group>"; };
+		A41936011EC3E566003FA0FD /* JJAddtionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAddtionHeader.h; sourceTree = "<group>"; };
+		A41936021EC3E566003FA0FD /* UIButton+Addtion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Addtion.h"; sourceTree = "<group>"; };
+		A41936031EC3E566003FA0FD /* UIButton+Addtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Addtion.m"; sourceTree = "<group>"; };
+		A41936041EC3E566003FA0FD /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A41936071EC3E566003FA0FD /* JJProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJProfileVC.h; sourceTree = "<group>"; };
+		A41936081EC3E566003FA0FD /* JJProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJProfileVC.m; sourceTree = "<group>"; };
+		A419360D1EC3E566003FA0FD /* JJSportMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSportMapVC.h; sourceTree = "<group>"; };
+		A419360E1EC3E566003FA0FD /* JJSportMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSportMapVC.m; sourceTree = "<group>"; };
+		A419360F1EC3E566003FA0FD /* JJSportSupportVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSportSupportVC.h; sourceTree = "<group>"; };
+		A41936101EC3E566003FA0FD /* JJSportSupportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSportSupportVC.m; sourceTree = "<group>"; };
+		A41936111EC3E566003FA0FD /* JJSportVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSportVC.h; sourceTree = "<group>"; };
+		A41936121EC3E566003FA0FD /* JJSportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSportVC.m; sourceTree = "<group>"; };
+		A41936141EC3E566003FA0FD /* JJSportTrackingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSportTrackingModel.h; sourceTree = "<group>"; };
+		A41936151EC3E566003FA0FD /* JJSportTrackingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSportTrackingModel.m; sourceTree = "<group>"; };
+		A41936191EC3E566003FA0FD /* JJSportCicleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSportCicleVC.h; sourceTree = "<group>"; };
+		A419361A1EC3E566003FA0FD /* JJSportCicleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSportCicleVC.m; sourceTree = "<group>"; };
+		A41936281EC3E618003FA0FD /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		A419362A1EC3E631003FA0FD /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
+		A419362C1EC3E642003FA0FD /* Prefile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Prefile.storyboard; sourceTree = "<group>"; };
+		A419362E1EC3E651003FA0FD /* Sport.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sport.storyboard; sourceTree = "<group>"; };
+		A41936301EC3E65F003FA0FD /* SportCicle.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SportCicle.storyboard; sourceTree = "<group>"; };
+		C0D37355963419F7E85E72F9 /* Pods-JJSportSB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJSportSB.release.xcconfig"; path = "Pods/Target Support Files/Pods-JJSportSB/Pods-JJSportSB.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A41935D01EC3E47F003FA0FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94CA9A45557661B6F9DA458E /* libPods-JJSportSB.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2977F66C162C8B8F72A2677F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04956EB411A94361E2466CBF /* libPods-JJSportSB.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		650C2ED8E7CFD77898088225 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0BA2F31FD8421A27CEECB5C /* Pods-JJSportSB.debug.xcconfig */,
+				C0D37355963419F7E85E72F9 /* Pods-JJSportSB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A41935CA1EC3E47F003FA0FD = {
+			isa = PBXGroup;
+			children = (
+				A41935ED1EC3E566003FA0FD /* Class */,
+				A41935D51EC3E47F003FA0FD /* JJSportSB */,
+				A41935D41EC3E47F003FA0FD /* Products */,
+				650C2ED8E7CFD77898088225 /* Pods */,
+				2977F66C162C8B8F72A2677F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A41935D41EC3E47F003FA0FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A41935D31EC3E47F003FA0FD /* JJSportSB.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A41935D51EC3E47F003FA0FD /* JJSportSB */ = {
+			isa = PBXGroup;
+			children = (
+				A41935D91EC3E47F003FA0FD /* AppDelegate.h */,
+				A41935DA1EC3E47F003FA0FD /* AppDelegate.m */,
+				A41935DC1EC3E47F003FA0FD /* ViewController.h */,
+				A41935DD1EC3E47F003FA0FD /* ViewController.m */,
+				A41935DF1EC3E47F003FA0FD /* Main.storyboard */,
+				A41935E21EC3E47F003FA0FD /* Assets.xcassets */,
+				A41935E41EC3E47F003FA0FD /* LaunchScreen.storyboard */,
+				A41935E71EC3E47F003FA0FD /* Info.plist */,
+				A41935D61EC3E47F003FA0FD /* Supporting Files */,
+			);
+			path = JJSportSB;
+			sourceTree = "<group>";
+		};
+		A41935D61EC3E47F003FA0FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A41935D71EC3E47F003FA0FD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A41935ED1EC3E566003FA0FD /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				A41935EE1EC3E566003FA0FD /* Discover */,
+				A41935F71EC3E566003FA0FD /* Message */,
+				A41935FD1EC3E566003FA0FD /* Other */,
+				A41936051EC3E566003FA0FD /* Profile */,
+				A419360B1EC3E566003FA0FD /* Sport */,
+				A41936171EC3E566003FA0FD /* SportCicle */,
+			);
+			name = Class;
+			path = JJSportSB/Class;
+			sourceTree = "<group>";
+		};
+		A41935EE1EC3E566003FA0FD /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				A41936281EC3E618003FA0FD /* Discover.storyboard */,
+				A41935EF1EC3E566003FA0FD /* Controller */,
+				A41935F21EC3E566003FA0FD /* Model */,
+				A41935F31EC3E566003FA0FD /* View */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		A41935EF1EC3E566003FA0FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A41935F01EC3E566003FA0FD /* JJDiscoverVC.h */,
+				A41935F11EC3E566003FA0FD /* JJDiscoverVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A41935F21EC3E566003FA0FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A41935F31EC3E566003FA0FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A41935F71EC3E566003FA0FD /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				A419362A1EC3E631003FA0FD /* Message.storyboard */,
+				A41935F81EC3E566003FA0FD /* Controller */,
+				A41935FB1EC3E566003FA0FD /* Model */,
+				A41935FC1EC3E566003FA0FD /* View */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		A41935F81EC3E566003FA0FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A41935F91EC3E566003FA0FD /* JJMessageVC.h */,
+				A41935FA1EC3E566003FA0FD /* JJMessageVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A41935FB1EC3E566003FA0FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A41935FC1EC3E566003FA0FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A41935FD1EC3E566003FA0FD /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A41935FE1EC3E566003FA0FD /* Controllers.json */,
+				A41935FF1EC3E566003FA0FD /* GlobalColor.h */,
+				A41936001EC3E566003FA0FD /* JJAddtions */,
+				A41936041EC3E566003FA0FD /* PrefixHeader.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		A41936001EC3E566003FA0FD /* JJAddtions */ = {
+			isa = PBXGroup;
+			children = (
+				A41936011EC3E566003FA0FD /* JJAddtionHeader.h */,
+				A41936021EC3E566003FA0FD /* UIButton+Addtion.h */,
+				A41936031EC3E566003FA0FD /* UIButton+Addtion.m */,
+			);
+			path = JJAddtions;
+			sourceTree = "<group>";
+		};
+		A41936051EC3E566003FA0FD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A419362C1EC3E642003FA0FD /* Prefile.storyboard */,
+				A41936061EC3E566003FA0FD /* Controller */,
+				A41936091EC3E566003FA0FD /* Model */,
+				A419360A1EC3E566003FA0FD /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A41936061EC3E566003FA0FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A41936071EC3E566003FA0FD /* JJProfileVC.h */,
+				A41936081EC3E566003FA0FD /* JJProfileVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A41936091EC3E566003FA0FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A419360A1EC3E566003FA0FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A419360B1EC3E566003FA0FD /* Sport */ = {
+			isa = PBXGroup;
+			children = (
+				A419362E1EC3E651003FA0FD /* Sport.storyboard */,
+				A419360C1EC3E566003FA0FD /* Controller */,
+				A41936131EC3E566003FA0FD /* Model */,
+				A41936161EC3E566003FA0FD /* View */,
+			);
+			path = Sport;
+			sourceTree = "<group>";
+		};
+		A419360C1EC3E566003FA0FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A419360D1EC3E566003FA0FD /* JJSportMapVC.h */,
+				A419360E1EC3E566003FA0FD /* JJSportMapVC.m */,
+				A419360F1EC3E566003FA0FD /* JJSportSupportVC.h */,
+				A41936101EC3E566003FA0FD /* JJSportSupportVC.m */,
+				A41936111EC3E566003FA0FD /* JJSportVC.h */,
+				A41936121EC3E566003FA0FD /* JJSportVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A41936131EC3E566003FA0FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A41936141EC3E566003FA0FD /* JJSportTrackingModel.h */,
+				A41936151EC3E566003FA0FD /* JJSportTrackingModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A41936161EC3E566003FA0FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A41936171EC3E566003FA0FD /* SportCicle */ = {
+			isa = PBXGroup;
+			children = (
+				A41936301EC3E65F003FA0FD /* SportCicle.storyboard */,
+				A41936181EC3E566003FA0FD /* Controller */,
+				A419361B1EC3E566003FA0FD /* Model */,
+				A419361C1EC3E566003FA0FD /* View */,
+			);
+			path = SportCicle;
+			sourceTree = "<group>";
+		};
+		A41936181EC3E566003FA0FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A41936191EC3E566003FA0FD /* JJSportCicleVC.h */,
+				A419361A1EC3E566003FA0FD /* JJSportCicleVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A419361B1EC3E566003FA0FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A419361C1EC3E566003FA0FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A41935D21EC3E47F003FA0FD /* JJSportSB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A41935EA1EC3E47F003FA0FD /* Build configuration list for PBXNativeTarget "JJSportSB" */;
+			buildPhases = (
+				33CDE10205758B1AB03437A5 /* [CP] Check Pods Manifest.lock */,
+				A41935CF1EC3E47F003FA0FD /* Sources */,
+				A41935D01EC3E47F003FA0FD /* Frameworks */,
+				A41935D11EC3E47F003FA0FD /* Resources */,
+				06C5E129A8A10DBE720AB21B /* [CP] Embed Pods Frameworks */,
+				1E917571E5ED99EE41A22A8F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JJSportSB;
+			productName = JJSportSB;
+			productReference = A41935D31EC3E47F003FA0FD /* JJSportSB.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A41935CB1EC3E47F003FA0FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "罗文琦";
+				TargetAttributes = {
+					A41935D21EC3E47F003FA0FD = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A41935CE1EC3E47F003FA0FD /* Build configuration list for PBXProject "JJSportSB" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A41935CA1EC3E47F003FA0FD;
+			productRefGroup = A41935D41EC3E47F003FA0FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A41935D21EC3E47F003FA0FD /* JJSportSB */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A41935D11EC3E47F003FA0FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A41935E61EC3E47F003FA0FD /* LaunchScreen.storyboard in Resources */,
+				A41936311EC3E65F003FA0FD /* SportCicle.storyboard in Resources */,
+				A41935E31EC3E47F003FA0FD /* Assets.xcassets in Resources */,
+				A419362D1EC3E642003FA0FD /* Prefile.storyboard in Resources */,
+				A41936291EC3E618003FA0FD /* Discover.storyboard in Resources */,
+				A41935E11EC3E47F003FA0FD /* Main.storyboard in Resources */,
+				A419362B1EC3E631003FA0FD /* Message.storyboard in Resources */,
+				A41936201EC3E566003FA0FD /* Controllers.json in Resources */,
+				A419362F1EC3E651003FA0FD /* Sport.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06C5E129A8A10DBE720AB21B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JJSportSB/Pods-JJSportSB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E917571E5ED99EE41A22A8F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JJSportSB/Pods-JJSportSB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33CDE10205758B1AB03437A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A41935CF1EC3E47F003FA0FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A41936211EC3E566003FA0FD /* UIButton+Addtion.m in Sources */,
+				A419361F1EC3E566003FA0FD /* JJMessageVC.m in Sources */,
+				A41936271EC3E566003FA0FD /* JJSportCicleVC.m in Sources */,
+				A41935DE1EC3E47F003FA0FD /* ViewController.m in Sources */,
+				A41936251EC3E566003FA0FD /* JJSportVC.m in Sources */,
+				A419361D1EC3E566003FA0FD /* JJDiscoverVC.m in Sources */,
+				A41936231EC3E566003FA0FD /* JJSportMapVC.m in Sources */,
+				A41935DB1EC3E47F003FA0FD /* AppDelegate.m in Sources */,
+				A41936241EC3E566003FA0FD /* JJSportSupportVC.m in Sources */,
+				A41936261EC3E566003FA0FD /* JJSportTrackingModel.m in Sources */,
+				A41936221EC3E566003FA0FD /* JJProfileVC.m in Sources */,
+				A41935D81EC3E47F003FA0FD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A41935DF1EC3E47F003FA0FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A41935E01EC3E47F003FA0FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A41935E41EC3E47F003FA0FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A41935E51EC3E47F003FA0FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A41935E81EC3E47F003FA0FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A41935E91EC3E47F003FA0FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A41935EB1EC3E47F003FA0FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0BA2F31FD8421A27CEECB5C /* Pods-JJSportSB.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = $SRCROOT/$PRODUCT_NAME/Class/Other/PrefixHeader.pch;
+				INFOPLIST_FILE = JJSportSB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luowenqi.JJSportSB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A41935EC1EC3E47F003FA0FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0D37355963419F7E85E72F9 /* Pods-JJSportSB.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = $SRCROOT/$PRODUCT_NAME/Class/Other/PrefixHeader.pch;
+				INFOPLIST_FILE = JJSportSB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luowenqi.JJSportSB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A41935CE1EC3E47F003FA0FD /* Build configuration list for PBXProject "JJSportSB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A41935E81EC3E47F003FA0FD /* Debug */,
+				A41935E91EC3E47F003FA0FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A41935EA1EC3E47F003FA0FD /* Build configuration list for PBXNativeTarget "JJSportSB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A41935EB1EC3E47F003FA0FD /* Debug */,
+				A41935EC1EC3E47F003FA0FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A41935CB1EC3E47F003FA0FD /* Project object */;
+}
