@@ -29,6 +29,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//
+    
+    
+    [self creatMapView];
+    
+
+
+}
+
+
+#pragma mark - 创建地图视图
+-(void)creatMapView{
+
+    
+    [AMapServices sharedServices].enableHTTPS = YES;
     
     ///初始化地图
     _mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
@@ -36,27 +51,30 @@
     ///把地图添加至view
     [self.view addSubview:_mapView];
     
-    //设置跟踪迷失
-    _mapView.userTrackingMode =  MAUserTrackingModeFollowWithHeading;
+    //设置mapView的一些属性
+    //设置跟踪模式
+    _mapView.userTrackingMode = MAUserTrackingModeFollowWithHeading;
     
-    _mapView.showsCompass = YES;
-    
-    _mapView.showsScale = YES;
-    
+    //设置交通状况
     _mapView.showTraffic = YES;
     
+    //设置代理
     _mapView.delegate = self;
     
-    //关闭后台自动暂停开关
+    //设置是不是可以后台定位
     _mapView.pausesLocationUpdatesAutomatically = NO;
-    
     /**
-     * 是否允许后台定位。默认为NO。只在iOS 9.0之后起作用。
-     * 设置为YES的时候必须保证 Background Modes 中的 Location updates处于选中状态，否则会抛出异常。
-     */
-    _mapView.allowsBackgroundLocationUpdates = YES;
+     //     * 是否允许后台定位。默认为NO。只在iOS 9.0之后起作用。
+     //     * 设置为YES的时候必须保证 Background Modes 中的 Location updates处于选中状态，否则会抛出异常。
+     //     */
+     _mapView.allowsBackgroundLocationUpdates = YES;
+    
 
 }
+
+
+
+
 
 
 -(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation{
@@ -101,7 +119,7 @@
         annotationView.animatesDrop = YES;        //设置标注动画显示，默认为NO
         annotationView.draggable = YES;        //设置标注可以拖动，默认为NO
   
-        UIImage *image= [UIImage imageNamed:@"map_annotation_bike.png"];
+        UIImage *image= [UIImage imageNamed:@"ic_history_riding_normal_54x54_"];
         annotationView.image = image;
         
         //改变大头针位置偏移量,大头针往上移动图片一半的高度，让大头针下方的尖角处于默认大头针的中心点

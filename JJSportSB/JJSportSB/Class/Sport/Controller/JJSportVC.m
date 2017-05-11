@@ -58,7 +58,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setupUI];
+//    [self setupUI];
 }
 
 #pragma mark - 创建遮罩视图

@@ -149,11 +149,11 @@
 		A41935ED1EC3E566003FA0FD /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A419360B1EC3E566003FA0FD /* Sport */,
 				A41935EE1EC3E566003FA0FD /* Discover */,
 				A41935F71EC3E566003FA0FD /* Message */,
 				A41935FD1EC3E566003FA0FD /* Other */,
 				A41936051EC3E566003FA0FD /* Profile */,
-				A419360B1EC3E566003FA0FD /* Sport */,
 				A41936171EC3E566003FA0FD /* SportCicle */,
 			);
 			name = Class;
@@ -391,7 +391,13 @@
 				TargetAttributes = {
 					A41935D21EC3E47F003FA0FD = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 47BSKU7WYS;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -619,6 +625,7 @@
 			baseConfigurationReference = A0BA2F31FD8421A27CEECB5C /* Pods-JJSportSB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 47BSKU7WYS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = $SRCROOT/$PRODUCT_NAME/Class/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = JJSportSB/Info.plist;
@@ -633,6 +640,7 @@
 			baseConfigurationReference = C0D37355963419F7E85E72F9 /* Pods-JJSportSB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 47BSKU7WYS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = $SRCROOT/$PRODUCT_NAME/Class/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = JJSportSB/Info.plist;

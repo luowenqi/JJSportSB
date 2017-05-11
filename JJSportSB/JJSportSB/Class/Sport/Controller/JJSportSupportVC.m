@@ -22,11 +22,11 @@
 #pragma mark - 设置界面
 -(void)setupUI{
 
-    //添加地图视图
-    [self addMapView];
-    
-    //添加支持视图
-    [self addSupportView];
+//    //添加地图视图
+//    [self addMapView];
+//    
+//    //添加支持视图
+//    [self addSupportView];
    
     
 

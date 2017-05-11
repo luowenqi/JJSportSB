@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
+
 
 @interface AppDelegate ()
 
@@ -20,7 +22,11 @@
     //进行全局的偏好设置
     [[UITabBar appearance]setTintColor:KGlobalGreen];
     
-//    [UITabBarController new]selectedIndex
+    //配置ATS以及key
+    [[AMapServices sharedServices] setEnableHTTPS:YES];
+    [AMapServices sharedServices].apiKey = @"933ff37e6da49fe2df218cdbf376cfa3";
+    
+
     
     return YES;
 }
